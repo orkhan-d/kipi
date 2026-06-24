@@ -5,7 +5,9 @@ const bannerRect = banner.getBoundingClientRect();
 const kipiRect = kipi.getBoundingClientRect();
 
 let posX = kipi.clientWidth / 2;
-let posY = -kipi.clientHeight / 2;
+let posY = -kipi.clientHeight * 4 / 11;
+let bottomPosY = -kipi.clientHeight * 4 / 11;
+
 let vx = 0, vy = 0;
 
 kipi.style.bottom = `${posY}px`;
@@ -54,8 +56,8 @@ const moveKipi = () => {
 			vy = 0;
 		}
 		
-		if (posY < -kipi.clientHeight / 2) {
-			posY = -kipi.clientHeight / 2;
+		if (posY < bottomPosY) {
+			posY = bottomPosY;
 			vy = 0;
 		}
 	}

@@ -15,3 +15,8 @@
     src: url('../assets/fonts/Manrope/static/Manrope-Light.ttf');
     font-weight: 400;
 }
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../assets/fonts/Geist/static/Geist-Regular.ttf');
+}

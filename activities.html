@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="activity-button card-button">
+                <button class="activity-button card-button" onclick="showModal()">
                     Узнать подробнее
                 </button>
             </div>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="activity-button card-button">
+                <button class="activity-button card-button" onclick="showModal()">
                     Узнать подробнее
                 </button>
             </div>
@@ -159,7 +159,9 @@
             <div class="search-card-content-prize">
                 <p class="search-card-content-prize-title">Главный приз — ОЧКИ РАНГО</p>
                 <img src="assets/images/activities/search-prize.png" alt="search-prize" class="search-card-content-prize-image"/>
-                <button class="card-button search-card-content-prize-button">Узнать подробнее</button>
+                <button class="card-button search-card-content-prize-button" onclick="showModal()">
+                    Узнать подробнее
+                </button>
             </div>
         </div>
     </div>
@@ -174,7 +176,7 @@
     </div>
     <div class="team-card-cards">
         <div class="team-card-column">
-            <div class="team-card-big-card">
+            <a class="team-card-big-card" href="404.html">
                 <div class="team-card-big-card-purple"></div>
                 <img alt="logo" class="team-card-big-card-img" src="assets/images/team/calibrate.png"/>
                 <p class="team-card-big-card-title">
@@ -183,7 +185,7 @@
                 <p class="team-card-big-card-description">
                     Партнеры Кипи AI предлагают откалибровать ваши VR-очки
                 </p>
-            </div>
+            </a>
             <div class="team-card-small-cards">
                 <div class="team-card-small-card">
                     <div class="team-card-small-card-content">
@@ -207,15 +209,15 @@
                         <p class="team-card-small-card-description">
                             Информация о компании и ее продуктах
                         </p>
-                        <button class="card-button team-card-small-card-button reversed-button">
+                        <a class="card-button team-card-small-card-button reversed-button" href="index.html#partners">
                             Узнать больше
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="team-card-column">
-            <div class="team-card-big-card">
+            <a class="team-card-big-card" href="404.html">
                 <div class="team-card-big-card-green"></div>
                 <img alt="logo" class="team-card-big-card-img" src="assets/images/team/info.png"/>
                 <p class="team-card-big-card-title">
@@ -224,7 +226,7 @@
                 <p class="team-card-big-card-description">
                     Столпы использования сервиса, юридическая информация
                 </p>
-            </div>
+            </a>
             <div class="team-card-small-cards">
                 <div class="team-card-small-card team-card-small-card-weekly">
                     <img alt="support-card" src="assets/images/team/weekly-task.png" class="team-card-small-card-weekly-image"/>
@@ -245,9 +247,9 @@
                         <p class="team-card-small-card-description">
                             Информация о компании и ее продуктах
                         </p>
-                        <button class="card-button team-card-small-card-button reversed-button">
+                        <a class="card-button team-card-small-card-button reversed-button" href="about.html">
                             Узнать больше о компании
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -282,16 +284,55 @@
                 </div>
             </div>
         </div>
-        <button class="footer-button card-button inverted-button reversed-button">
+        <a class="footer-button card-button inverted-button reversed-button" href="about.html">
             Узнать больше о компании
-        </button>
+        </a>
     </div>
     <p class="footer-bottom-title">
         КИПИ AI
     </p>
 </footer>
 
+<div class="modal-wrapper">
+    <div class="modal">
+        <button onclick="closeModal()" class="modal-close-button">
+            <img src="assets/images/modal-close.svg" alt="close" class="modal-close"/>
+        </button>
+        <form action="#" class="modal-form">
+            <p class="modal-title">Оставить заявку</p>
+            <div class="modal-field-wrapper">
+                <label for="name" class="modal-field-title">Ваше имя</label>
+                <input id="name" name="name" type="text" class="modal-field-input" placeholder="Иванов Иван" required/>
+                <p class="modal-field-invalid">Заполните это поле</p>
+            </div>
+            <div class="modal-field-wrapper">
+                <label for="phone" class="modal-field-title">Телефон для связи</label>
+                <input id="phone" name="phone" type="text" class="modal-field-input" placeholder="+7 (927) 000-00-00" required/>
+                <p class="modal-field-invalid">Заполните это поле</p>
+            </div>
+            <div class="modal-field-wrapper">
+                <label for="email" class="modal-field-title">Электронная почта</label>
+                <input id="email" name="email" type="text" class="modal-field-input" placeholder="example@ya.ru" required/>
+                <p class="modal-field-invalid">Заполните это поле</p>
+            </div>
+
+            <div class="modal-checkbox-wrapper">
+                <input id="agree" name="agree" type="checkbox" class="modal-checkbox" required/>
+                <label for="agree" class="modal-checkbox-title">Я согласен(а) на обработку персональных данных</label>
+            </div>
+
+            <button class="modal-button">
+                Оставить заявку
+            </button>
+            <p class="modal-info">
+                Нажимая кнопку Вы соглашаетесь с правилами и Политикой конфиденциальности ресурса.
+            </p>
+        </form>
+    </div>
+</div>
+
 <script src="js/move-horizontally.js"></script>
+<script src="js/modal.js"></script>
 
 </body>
 </html>

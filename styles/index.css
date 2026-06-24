@@ -89,6 +89,8 @@
     border-radius: var(--small-radius);
     padding: 24px;
 
+    transition: all 0.2s ease;
+
     &:nth-child(even) {
         flex-direction: column-reverse;
     }
@@ -111,6 +113,10 @@
     &.lovely {
         background: var(--lovely);
         color: #fff;
+    }
+
+    &:hover {
+        transform: scale(1.01);
     }
 }
 
@@ -137,6 +143,32 @@
     width: 80% !important;
     height: auto;
     margin: 0 auto;
+
+    transition: all 1s ease;
+}
+
+.benefit-card:hover .benefit-kipi {
+    --shake-deg: -1deg;
+
+    animation: kipi-shake 1s linear infinite;
+}
+
+@keyframes kipi-shake {
+    0% {
+        rotate: 0deg;
+    }
+    25% {
+        rotate: var(--shake-deg);
+    }
+    50% {
+        rotate: 0deg;
+    }
+    75% {
+        rotate: calc(-1 * var(--shake-deg));
+    }
+    100% {
+        rotate: 0deg;
+    }
 }
 
 .companies-card {
@@ -216,7 +248,7 @@
     font-size: 24px;
     color: #fff;
 
-    animation: demo-text-marquee 10s linear infinite;
+    animation: demo-text-marquee 20s linear infinite;
 }
 
 @keyframes demo-text-marquee {
