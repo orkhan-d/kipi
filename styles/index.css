@@ -1,0 +1,447 @@
+.banner-title {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 170px;
+    line-height: 200%;
+    letter-spacing: 3%;
+    text-align: center;
+    vertical-align: middle;
+
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(220, 220, 220, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block;
+}
+
+.banner {
+    transition: all 1s ease;
+}
+
+.banner-content-main {
+    padding: 128px 64px 48px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.meet-button {
+    padding: 20px 52px;
+    border-radius: 0 40px;
+    font-size: 26px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 4px;
+}
+
+.quote-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.quote-content {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    max-width: 400px; /* TODO: change */
+}
+
+.banner .kipi {
+    position: absolute;
+    will-change: transform;
+}
+
+.banner .kipi .kipi-eyes {
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.banner .kipi .kipi-eyes.kipi-eyes-active {
+    opacity: 1;
+}
+
+.benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 0 var(--big-side-margin);
+}
+
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 128px;
+
+    border-radius: var(--small-radius);
+    padding: 24px;
+
+    &:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    &.calm {
+        background: var(--calm);
+        color: #000;
+    }
+
+    &.angry {
+        background: var(--angry);
+        color: #fff;
+    }
+
+    &.sad {
+        background: var(--sad);
+        color: #fff;
+    }
+
+    &.lovely {
+        background: var(--lovely);
+        color: #fff;
+    }
+}
+
+.benefit-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.benefit-title {
+    font-family: "Onder", sans-serif;
+    font-size: 16px;
+}
+
+.benefit-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.benefit-kipi {
+    width: 80% !important;
+    height: auto;
+    margin: 0 auto;
+}
+
+.companies-card {
+    gap: 16px;
+}
+
+.company-cards {
+    width: 100%;
+    overflow: hidden;
+}
+
+.company-cards-track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: max-content;
+    gap: 16px;
+    animation: slide 12s linear infinite;
+
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.company-cards-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 8px));
+    }
+}
+
+.company-card {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--small-radius);
+    background: rgba(243, 243, 243, 1);
+
+    width: 25vw !important;
+    height: 15vh;
+}
+
+.demo-image-banner {
+    border-radius: var(--big-radius);
+    margin: var(--small-side-margin);
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.demo-image-banner .demo-banner-image {
+    width: 100%;
+    height: auto;
+}
+
+.demo-image-banner .demo-info {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.demo-info .marquee-track {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+
+    animation: demo-text-marquee 10s linear infinite;
+}
+
+@keyframes demo-text-marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.demo-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.demo-info-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    margin: 0 var(--big-side-margin);
+}
+
+.demo-info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+
+    background: rgba(243, 243, 243, 1);
+
+    border-radius: var(--small-radius);
+    padding: 18px 20px 22px 24px;
+}
+
+.demo-info-card .demo-info-card-value {
+    font-family: "Onder", sans-serif;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.demo-info-card:nth-child(even) .demo-info-card-value {
+    font-family: "Onder", sans-serif;
+    font-size: 40px;
+    color: rgba(138, 41, 242, 1);
+}
+
+.demo-info-card .demo-info-card-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.team-card-cards {
+    margin: 0 var(--big-side-margin);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.team-card-column {
+    display: flex;
+    flex-direction: column;
+    &:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.team-card-big-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.5625;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 6px;
+
+    background: rgba(0, 0, 0, 1);
+    border-radius: var(--small-radius);
+    overflow: hidden;
+}
+
+.team-card-big-card-purple {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(242, 41, 122, 0.87) 0%, rgba(0, 0, 0, 0.87) 100%);
+    z-index: 2;
+}
+
+.team-card-big-card-green {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(118, 242, 41, 0.87) 0%, rgba(0, 0, 0, 0.87) 93.26%);
+    z-index: 2;
+}
+
+.team-card-big-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.team-card-big-card-purple .team-card-big-card-img {
+    top: 21px;
+}
+
+.team-card-big-card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-big-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.6;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-small-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.team-card-small-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 24px;
+    background: rgba(243, 243, 243, 1);
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.team-card-small-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+    height: 100%;
+}
+
+.team-card-big-card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-big-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.6;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-small-card .team-card-small-card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 18px;
+}
+
+.team-card-small-card .team-card-small-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.team-card-small-card .team-card-small-card-button {
+    width: 100%;
+    font-size: 16px;
+
+    margin-top: 16px;
+
+    border-top-radius: 0 24px;
+}
+
+.team-card-small-card-support-image {
+    margin-bottom: 16px;
+}
+
+.team-card-small-card-partners-image-wrapper {
+    width: 100%;
+    padding-top: 16px;
+    padding-left: 16px;
+    flex: 1;
+}
+
+.team-card-small-card-weekly {
+    position: relative;
+}
+
+.team-card-small-card-weekly .team-card-small-card-content {
+    justify-content: space-between;
+}
+
+.team-card-small-card-weekly .team-card-small-card-weekly-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 92%;
+    z-index: 2;
+}
+
+.team-card-small-card-more .team-card-small-card-content {
+    justify-content: flex-end;
+}

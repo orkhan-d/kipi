@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+:root {
+    --big-side-margin: 62px;
+    --small-side-margin: 16px;
+
+    --small-radius: 24px;
+    --big-radius: 32px;
+
+    --card-padding: 24px;
+    --card-small-padding: 16px;
+
+    --calm: rgba(118, 242, 41, 1);
+    --angry: rgba(242, 71, 41, 1);
+    --sad: rgba(138, 41, 242, 1);
+    --lovely: rgba(242, 41, 122, 1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: stretch;
+}
+
+.wrapper {
+    margin: 16px;
+}
+
+.banner {
+    border-radius: var(--big-radius);
+    background: var(--angry);
+    overflow: hidden;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-wrapper {
+    padding: var(--card-padding) 40px 48px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+    /* Semi-transparent background tint */
+    background: rgba(255, 255, 255, 0.15);
+
+    /* The frosted glass blur effect */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+
+    /* Subtle light-reflective border */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* Smooth edges and a soft shadow for depth */
+    border-radius: 50vh;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.nav-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 8px 0 8px 76px;
+    flex: 1;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    font-family: "Manrope", sans-serif;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 3%;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.download-button {
+    align-self: stretch;
+    background: #ffffff;
+    padding: 12px 24px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 3%;
+    vertical-align: middle;
+    border-radius: 50vh;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    height: min-content;
+}
+
+.logo-img {
+    height: 32px;
+}
+
+.logo-title {
+    font-size: 12px;
+    font-family: "Onder", sans-serif;
+}
+
+.logo-description {
+    font-size: 10px;
+    font-family: "Manrope", sans-serif;
+}
+
+.banner-content {
+    display: flex;
+    width: 100%;
+}
+
+/* KIPI */
+.kipi {
+    display: flex;
+    position: relative;
+    width: 40%;
+}
+
+.kipi .kipi-mask {
+    width: 100%;
+    height: auto;
+}
+
+.kipi .kipi-eyes {
+    width: 100%;
+    position: absolute;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 var(--big-side-margin);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 24px;
+}
+
+.card-button {
+    padding: 12px 32px;
+    gap: 8px;
+
+    color: #fff;
+    background: #000;
+
+    border-radius: 24px 0;
+
+    &.inverted-button {
+        color: #000;
+        background: #fff;
+    }
+
+    &.reversed-button {
+        border-radius: 0 24px;
+    }
+}
+
+footer {
+    position: relative;
+    border-radius: var(--small-radius);
+    margin: 0 var(--small-side-margin);
+    background: #000;
+    color: #fff;
+    padding: 42px 50px 240px;
+    overflow: hidden;
+    margin-bottom: var(--small-side-margin);
+}
+
+.footer-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 128px;
+}
+
+.footer-content-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.footer-content-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.footer-content-column-header {
+    font-family: "Onder", sans-serif;
+    font-size: 11px;
+}
+
+.footer-content-column-menu-tile {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.footer-content-column-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.footer-button {
+    font-size: 16px;
+}
+
+.footer-bottom-title {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 111px;
+    position: absolute;
+    bottom: -27px;
+}
