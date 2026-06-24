@@ -81,7 +81,7 @@ const initScareEffect = () => {
 		
 		const angle = Math.random() * Math.PI * 2;
 		
-		const scareSpeed = 30;
+		const scareSpeed = 90;
 		
 		vx = Math.cos(angle) * scareSpeed;
 		vy = Math.sin(angle) * scareSpeed;
