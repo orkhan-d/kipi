@@ -1,0 +1,322 @@
+.banner-title {
+    font-family: "Onder", sans-serif;
+    font-size: 72px;
+    margin: 0 auto;
+    line-height: 200%;
+    letter-spacing: 3%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block;
+    background-image: linear-gradient(90deg, #FFFFFF 0%, #DCDCDC 100%);
+}
+
+.banner {
+    background: #000;
+    position: relative;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 4px;
+}
+
+.quote-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.quote-content {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    max-width: 400px; /* TODO: change */
+    opacity: 80%;
+}
+
+.banner-content {
+    margin: 0 36px 56px 0;
+}
+
+.banner-content-main {
+    justify-content: flex-end;
+}
+
+.banner .kipi {
+    position: absolute;
+    width: 30%;
+}
+
+.activity-cards {
+    margin: 0 var(--big-side-margin);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.activity-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    background: rgba(243, 243, 243, 1);
+    border-radius: var(--small-radius);
+}
+
+.activity-card-image {
+    margin: 8px;
+    border-radius: var(--small-radius);
+    width: 100%;
+}
+
+.activity-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.activity-title {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: 3%;
+    vertical-align: middle;
+}
+
+.activity-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.activity-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.activity-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.activity-field-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.activity-field-value {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.activity-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.activity-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 16px;
+    flex: 1;
+}
+
+.activity-button {
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.search-card-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.search-card-title-image {
+    height: min-content;
+}
+
+.search-card-content {
+    margin: var(--small-side-margin);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.search-card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.search-card-content-wrapper {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px;
+}
+
+.search-card-content-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    width: min-content;
+    min-width: min-content;
+    max-width: min-content;
+}
+
+.search-card-content-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px;
+
+    color: #fff;
+}
+
+.search-card-content-main-content-title {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 200%;
+
+    span {
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        display: inline-block;
+
+        background-image: linear-gradient(90deg, #FFFFFF 0%, #C9FFA8 100%);
+    }
+}
+
+.search-card-content-main-content-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.search-card-content-main-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.search-card-content-main-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 26px 20px 24px;
+    border-radius: 24px;
+    background: #fff;
+    width: 100%;
+}
+
+.search-card-content-main-card-value {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: rgba(138, 41, 242, 1);
+}
+
+.search-card-content-main-card-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.search-card-content-prize {
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.search-card-content-prize-title {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 200%;
+    color: #000;
+    padding: 16px;
+}
+
+.search-card-content-prize-image {
+    align-self: center;
+    width: 80%;
+    height: auto;
+
+    will-change: transform;
+    animation: brownian 12s infinite linear;
+}
+
+.search-card-content-prize-button {
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+}
+
+@keyframes brownian {
+    0%   { transform: translate(0px, 0px); }
+    10%  { transform: translate(-3px, 2px); }
+    20%  { transform: translate(4px, -5px); }
+    30%  { transform: translate(-5px, 1px); }
+    40%  { transform: translate(3px, -3px); }
+    50%  { transform: translate(-1px, 5px); }
+    60%  { transform: translate(5px, -2px); }
+    70%  { transform: translate(-4px, 4px); }
+    80%  { transform: translate(2px, -4px); }
+    90%  { transform: translate(-2px, 3px); }
+    100% { transform: translate(0px, 0px); }
+}
