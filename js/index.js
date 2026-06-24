@@ -13,6 +13,7 @@ const friction = 0.98; // Трение (замедление), чтобы дви
 const impulse = 0.2;   // Сила случайного толчка на каждом кадра
 
 let isJumping = false; // иногда надо и прыгать:)
+let isScared = false; // он застенчивый, не надо его стеснять:(
 
 let currentEmotion = 'angry';
 const emotions = ['calm', 'angry', 'sad', 'lovely'];
@@ -20,7 +21,7 @@ const emotions = ['calm', 'angry', 'sad', 'lovely'];
 
 const moveKipi = () => {
 	// Если прыжка нет, рассчитываем обычное хаотичное движение
-	if (!isJumping) {
+	if (!isJumping && !isScared) {
 		const angle = Math.random() * Math.PI * 2;
 		vx += Math.cos(angle) * impulse;
 		vy += Math.sin(angle) * impulse;
@@ -62,14 +63,40 @@ const moveKipi = () => {
 	kipi.style.left = `${posX}px`;
 	kipi.style.top = `${posY}px`;
 	
+	if (isScared && Math.sqrt(vx * vx + vy * vy) < maxSpeed) {
+		isScared = false;
+		
+		const resumeAngle = Math.random() * Math.PI * 2;
+		vx = Math.cos(resumeAngle) * maxSpeed;
+		vy = Math.sin(resumeAngle) * maxSpeed;
+	}
+	
 	requestAnimationFrame(moveKipi);
 }
 
+const initScareEffect = () => {
+	kipi.addEventListener('mouseenter', () => {
+		isScared = true;
+		isJumping = false; // Прерываем прыжок, если он шел в этот момент
+		
+		const angle = Math.random() * Math.PI * 2;
+		
+		const scareSpeed = 30;
+		
+		vx = Math.cos(angle) * scareSpeed;
+		vy = Math.sin(angle) * scareSpeed;
+	});
+}
 
 const jumpKipi = () => {
 	const randomDelay = Math.random() * (10000 - 5000) + 5000;
 	
 	setTimeout(() => {
+		if (isScared) {
+			jumpKipi();
+			return;
+		}
+		
 		isJumping = true;
 		vx = 0; // Останавливаем движение по горизонтали для четкости прыжка
 		vy = 0;
@@ -118,7 +145,6 @@ const switchEmotion = () => {
 	
 	kipi.querySelector(`.kipi-eyes-${currentEmotion}`).classList.add('kipi-eyes-active');
 }
-
 
 const incrementValues = () => {
 	const cards = document.querySelectorAll(".to-increment");
@@ -178,10 +204,10 @@ const incrementValues = () => {
 	cards.forEach(card => observer.observe(card));
 }
 
-
 window.addEventListener('DOMContentLoaded', () => {
 	kipi.style.transform = 'none';
 	moveKipi();
 	jumpKipi();
+	initScareEffect();
 	incrementValues();
 });
