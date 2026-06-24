@@ -18,6 +18,8 @@ let isScared = false; // он застенчивый, не надо его ст�
 let currentEmotion = 'angry';
 const emotions = ['calm', 'angry', 'sad', 'lovely'];
 
+let lastScared = 0;
+
 
 const moveKipi = () => {
 	// Если прыжка нет, рассчитываем обычное хаотичное движение
@@ -76,15 +78,30 @@ const moveKipi = () => {
 
 const initScareEffect = () => {
 	kipi.addEventListener('mouseenter', () => {
+		if (Date.now() - lastScared < 5000) {
+			return;
+		}
+		
+		lastScared = Date.now();
+		
 		isScared = true;
 		isJumping = false; // Прерываем прыжок, если он шел в этот момент
 		
 		const angle = Math.random() * Math.PI * 2;
 		
-		const scareSpeed = 90;
+		const scareSpeed = 60;
 		
 		vx = Math.cos(angle) * scareSpeed;
 		vy = Math.sin(angle) * scareSpeed;
+	});
+}
+const deactivateScareEffect = () => {
+	kipi.addEventListener('mouseleave', () => {
+		isScared = false;
+		const angle = Math.random() * Math.PI * 2;
+		
+		vx = Math.cos(angle) * maxSpeed;
+		vy = Math.sin(angle) * maxSpeed;
 	});
 }
 
@@ -209,5 +226,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	moveKipi();
 	jumpKipi();
 	initScareEffect();
+	deactivateScareEffect();
 	incrementValues();
 });
