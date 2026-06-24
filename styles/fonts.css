@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'Onder';
-    src: url('/assets/fonts/Onder/onder-regular.ttf');
+    src: url('../assets/fonts/Onder/onder-regular.ttf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Manrope';
-    src: url('/assets/fonts/Manrope/static/Manrope-Regular.ttf');
+    src: url('../assets/fonts/Manrope/static/Manrope-Regular.ttf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Manrope';
-    src: url('/assets/fonts/Manrope/static/Manrope-Light.ttf');
+    src: url('../assets/fonts/Manrope/static/Manrope-Light.ttf');
     font-weight: 400;
 }
