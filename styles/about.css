@@ -1,0 +1,186 @@
+.banner-title {
+    font-family: "Onder", sans-serif;
+    font-size: 72px;
+    margin: 0 auto;
+    line-height: 200%;
+    letter-spacing: 3%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block;
+    background-image: linear-gradient(90deg, #FFFFFF 0%, #DCDCDC 100%);
+}
+
+.banner {
+    background: #000;
+    position: relative;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 4px;
+}
+
+.quote-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.quote-content {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    max-width: 400px; /* TODO: change */
+    opacity: 80%;
+}
+
+.banner-content {
+    margin: 0 36px 56px 0;
+}
+
+.banner-content-main {
+    justify-content: flex-end;
+}
+
+.banner .kipi {
+    position: absolute;
+    width: 30%;
+}
+
+.rango-corp-cards {
+    margin: 0 var(--big-side-margin);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.rango-corp-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.rango-corp-big-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.5625;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 6px;
+
+    background: rgba(0, 0, 0, 1);
+    border-radius: var(--small-radius);
+    overflow: hidden;
+}
+
+.rango-corp-big-card-purple {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 51, 235, 0.87) 0%, rgba(0, 0, 0, 0.87) 100%);
+    z-index: 2;
+}
+
+.rango-corp-big-card-green {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 255, 188, 0.87) 0%, rgba(0, 0, 0, 0.87) 93.26%);
+    z-index: 2;
+}
+
+.rango-corp-big-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.rango-corp-big-card-purple .rango-corp-big-card-img {
+    top: 21px;
+}
+
+.rango-corp-big-card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    z-index: 3;
+}
+
+.rango-corp-big-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.6;
+    color: #fff;
+    z-index: 3;
+}
+
+.rango-corp-small-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.rango-corp-small-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.rango-corp-small-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px;
+}
+
+.rango-corp-small-card-image {
+    object-fit: contain;
+    width: 100%;
+}
+
+.rango-corp-small-card-title {
+    font-family: "Onder", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.rango-corp-small-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.collaborate-image-banner {
+    border-radius: var(--big-radius);
+    margin: var(--small-side-margin);
+    overflow: hidden;
+}
+
+.collaborate-image-banner .collaborate-image {
+    width: 100%;
+    height: auto;
+}

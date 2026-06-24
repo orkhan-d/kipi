@@ -128,6 +128,7 @@ nav {
     gap: 8px;
 
     height: min-content;
+    color: #fff;
 }
 
 .logo-img {
@@ -146,7 +147,6 @@ nav {
 
 .banner-content {
     display: flex;
-    width: 100%;
 }
 
 /* KIPI */
@@ -286,4 +286,178 @@ footer {
     font-size: 111px;
     position: absolute;
     bottom: -27px;
+}
+
+
+.team-card-cards {
+    margin: 0 var(--big-side-margin);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.team-card-column {
+    display: flex;
+    flex-direction: column;
+    &:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.team-card-big-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.5625;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 6px;
+
+    background: rgba(0, 0, 0, 1);
+    border-radius: var(--small-radius);
+    overflow: hidden;
+}
+
+.team-card-big-card-purple {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(242, 41, 122, 0.87) 0%, rgba(0, 0, 0, 0.87) 100%);
+    z-index: 2;
+}
+
+.team-card-big-card-green {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(118, 242, 41, 0.87) 0%, rgba(0, 0, 0, 0.87) 93.26%);
+    z-index: 2;
+}
+
+.team-card-big-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.team-card-big-card-purple .team-card-big-card-img {
+    top: 21px;
+}
+
+.team-card-big-card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-big-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.6;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-small-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.team-card-small-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 24px;
+    background: rgba(243, 243, 243, 1);
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.team-card-small-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+    height: 100%;
+}
+
+.team-card-big-card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-big-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.6;
+    color: #fff;
+    z-index: 3;
+}
+
+.team-card-small-card .team-card-small-card-title {
+    font-family: "Onder", sans-serif;
+    font-size: 18px;
+}
+
+.team-card-small-card .team-card-small-card-description {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.team-card-small-card .team-card-small-card-button {
+    width: 100%;
+    font-size: 16px;
+
+    margin-top: 16px;
+
+    border-top-radius: 0 24px;
+}
+
+.team-card-small-card-support-image {
+    margin-bottom: 16px;
+}
+
+.team-card-small-card-partners-image-wrapper {
+    width: 100%;
+    padding-top: 16px;
+    padding-left: 16px;
+    flex: 1;
+}
+
+.team-card-small-card-weekly {
+    position: relative;
+}
+
+.team-card-small-card-weekly .team-card-small-card-content {
+    justify-content: space-between;
+}
+
+.team-card-small-card-weekly .team-card-small-card-weekly-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 92%;
+    z-index: 2;
+}
+
+.team-card-small-card-more .team-card-small-card-content {
+    justify-content: flex-end;
 }
