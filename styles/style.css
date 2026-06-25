@@ -251,6 +251,10 @@ nav {
     &.reversed-button {
         border-radius: 0 24px;
     }
+
+    &:hover {
+        color: var(--calm);
+    }
 }
 
 footer {
