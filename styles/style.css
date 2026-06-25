@@ -257,6 +257,10 @@ nav {
     }
 }
 
+nav a:hover {
+    color: var(--calm);
+}
+
 footer {
     position: relative;
     border-radius: var(--small-radius);
