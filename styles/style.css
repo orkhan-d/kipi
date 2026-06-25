@@ -746,8 +746,13 @@ footer {
     }
 
     .team-card-mobile {
-        display: block;
+        display: flex;
+        justify-content: flex-end;
         margin: 0 var(--small-side-margin);
+    }
+
+    .team-card-small-card-more.team-card-mobile {
+        justify-content: flex-end;
     }
 
     .team-card-big-card {
@@ -779,7 +784,7 @@ footer {
         padding: 0;
 
         .footer-columns {
-            padding: 42px 50px;
+            padding: 42px 36px;
         }
 
         display: flex;

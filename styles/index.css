@@ -353,7 +353,7 @@
     .benefit-cards {
         overflow-y: scroll;
         margin: 0;
-        padding: 0 var(--small-side-margin);
+        padding: 10px var(--small-side-margin);
         scrollbar-width: none;
         -ms-overflow-style: none;
     }

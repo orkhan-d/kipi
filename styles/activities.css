@@ -387,6 +387,7 @@
         grid-template-columns: repeat(1, 1fr);
         margin: 0;
         padding: 0 var(--small-side-margin);
+        gap: 32px;
     }
 
     .search-card-title {
@@ -414,6 +415,7 @@
 
     .search-card-content-wrapper {
         flex-direction: column;
+        padding: 8px;
     }
 
     .search-card-image {
@@ -428,6 +430,10 @@
 
     .search-card-content-prize-title {
         font-size: 12px
+    }
+
+    .search-card-content-main-content {
+        padding: 20px 12px;
     }
 
     .search-card-content-main-cards-mobile {
@@ -456,6 +462,17 @@
 
         .team-card-small-card-content {
             width: 100%;
+        }
+    }
+
+    .team-card-small-card-mobile-partners {
+        .team-card-small-card-content {
+            margin-top: auto;
+            height: min-content;
+        }
+
+        .team-card-small-card-partners-image-wrapper {
+            padding-bottom: 24px;
         }
     }
 }
