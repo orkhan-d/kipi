@@ -20,8 +20,11 @@ const emotions = ['calm', 'angry', 'sad', 'lovely'];
 
 let lastScared = 0;
 
+const isDesktop = () => window.matchMedia('(min-width: 769px)').matches;
 
 const moveKipi = () => {
+	if (!isDesktop()) return;
+	
 	// Если прыжка нет, рассчитываем обычное хаотичное движение
 	if (!isJumping && !isScared) {
 		const angle = Math.random() * Math.PI * 2;

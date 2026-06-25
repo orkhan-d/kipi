@@ -26,6 +26,13 @@ a, button {
     --lovely: rgba(242, 41, 122, 1);
 }
 
+@media screen and (max-width: 576px) {
+    :root {
+        --big-side-margin: 16px;
+        --small-side-margin: 16px;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -97,6 +104,12 @@ nav {
     margin: 0 auto;
 }
 
+.nav-items-mobile {
+    display: none;
+    font-family: "Manrope", sans-serif;
+    overflow: hidden;
+}
+
 .nav-item {
     display: flex;
     flex-direction: row;
@@ -122,6 +135,14 @@ nav {
     letter-spacing: 3%;
     vertical-align: middle;
     border-radius: 50vh;
+}
+
+.nav-burger {
+    display: none;
+}
+
+.nav-burger-checkbox {
+    display: none;
 }
 
 .logo {
@@ -195,13 +216,17 @@ nav {
     gap: 8px;
 }
 
-.card-description {
+.card-description, .card-description-mobile {
     font-family: "Manrope", sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
 
-.card-title {
+.card-title-mobile, .card-description-mobile {
+    display: none;
+}
+
+.card-title, .card-title-mobile {
     font-family: "Onder", sans-serif;
     font-size: 24px;
 }
@@ -446,6 +471,7 @@ footer {
 
 .team-card-small-card-support-image {
     margin-bottom: 16px;
+    width: 100%;
 }
 
 .team-card-small-card-partners-image-wrapper {
@@ -475,6 +501,9 @@ footer {
     justify-content: flex-end;
 }
 
+.modal-wrapper {
+    display: none;
+}
 
 .modal-wrapper.modal-open {
     position: fixed;
@@ -613,4 +642,187 @@ footer {
     font-size: 12px;
     align-self: center;
     text-align: center;
+}
+
+.team-card-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .download-button {
+        display: none;
+    }
+
+    nav {
+        border-radius: 24px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-wrapper {
+        padding: 16px;
+    }
+
+    .nav-inner {
+        justify-content: space-between;
+        padding: 8px 36px;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .nav-burger {
+        position: relative;
+        display: block;
+        background: none;
+    }
+
+    .nav-burger, .nav-burger-image-inactive, .nav-burger-image-active {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-burger-image-inactive, .nav-burger-image-active {
+        position: absolute;
+        inset: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .nav-burger-image-inactive {
+        opacity: 1; /* Show burger by default */
+    }
+
+    .nav-burger-image-active {
+        opacity: 0;  /* Hide close icon by default */
+    }
+
+    /* TOGGLED STATES */
+    .nav-burger-checkbox:checked ~ .nav-burger-image-inactive {
+        opacity: 0;
+    }
+
+    .nav-burger-checkbox:checked ~ .nav-burger-image-active {
+        opacity: 1;
+    }
+
+    .nav-items-mobile {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s ease-out;
+    }
+
+    .nav-mobile-wrapper {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-bottom: 16px;
+    }
+
+    /* FIX: Target the main parent container instead of using the sibling selector */
+    nav:has(.nav-burger-checkbox:checked) .nav-items-mobile {
+        grid-template-rows: 1fr;
+    }
+
+    .banner {
+        gap: 16px;
+    }
+
+    .card-header .card-button {
+        display: none;
+    }
+
+    .team-card-cards {
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0;
+        padding: 0 var(--small-side-margin);
+    }
+
+    .team-card-small-cards {
+        display: none;
+    }
+
+    .team-card-mobile {
+        display: block;
+        margin: 0 var(--small-side-margin);
+    }
+
+    .team-card-big-card {
+        height: 100%;
+        aspect-ratio: 2/3;
+
+        .team-card-big-card-img {
+            object-fit: cover;
+            width: auto;
+        }
+    }
+
+    .team-card-column {
+        &:nth-child(even) {
+            flex-direction: column;
+        }
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-content-columns {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 0;
+
+        .footer-columns {
+            padding: 42px 50px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+
+        .logo-img {
+            width: 46px;
+            height: 46px;
+        }
+
+        .logo-title {
+            font-size: 20px;
+        }
+
+        .logo-description {
+            font-size: 16px;
+        }
+    }
+
+    .footer-content-column-header {
+        font-size: 14px;
+    }
+
+    .footer-content-column-menu-tile {
+        font-size: 18px;
+    }
+
+    .footer-button {
+        display: none;
+    }
+
+    .footer-bottom-title {
+        position: static;
+        margin: 0 calc(-1 * var(--small-side-margin));
+        margin-bottom: calc(-1 * var(--small-side-margin));
+        padding: 0 calc(-1 * var(--small-side-margin));
+        font-size: 36px;
+        white-space: nowrap;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
 }

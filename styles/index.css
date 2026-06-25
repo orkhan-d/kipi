@@ -47,6 +47,7 @@
     font-family: "Manrope", sans-serif;
     font-weight: 500;
     font-size: 18px;
+    font-style: italic;
 }
 
 .quote-content {
@@ -305,4 +306,84 @@
     font-family: "Manrope", sans-serif;
     font-weight: 400;
     font-size: 16px;
+}
+
+@media screen and (max-width: 576px) {
+    .banner .kipi {
+        position: static;
+        width: 90%;
+        margin: 32px auto 0;
+    }
+
+    .banner-title {
+        font-size: 42px;
+    }
+
+    .banner-content-main {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .quote {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .quote-title {
+        font-size: 18px;
+        font-style: normal;
+    }
+
+    .quote-content {
+        font-size: 14px;
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .meet-button {
+        font-size: 22px;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .benefit-cards {
+        overflow-y: scroll;
+        margin: 0;
+        padding: 0 var(--small-side-margin);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .benefit-card {
+        width: calc(100dvw - var(--small-side-margin) * 6);
+    }
+
+    .company-card {
+        width: calc(100dvw - var(--small-side-margin) * 6) !important;
+    }
+
+    .company-cards-track:hover {
+        animation-play-state: running;
+    }
+
+    .demo-banner-image {
+        aspect-ratio: 2/3;
+        object-fit: cover;
+    }
+
+    .demo-info-cards {
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0;
+        padding: 0 var(--small-side-margin);
+    }
+
+    .demo-info-card {
+        width: calc(100dvw - var(--small-side-margin) * 6);
+    }
 }

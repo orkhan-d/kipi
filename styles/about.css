@@ -190,3 +190,106 @@
     width: 100%;
     height: auto;
 }
+
+.rango-corp-cards-mobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 576px) {
+    .banner .kipi {
+        position: relative;
+        width: 90%;
+        margin: 32px auto 0;
+    }
+
+    .banner-title {
+        font-size: 16px;
+    }
+
+    .banner-content-main {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .quote {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .quote-title {
+        font-size: 18px;
+        font-style: normal;
+    }
+
+    .quote-content {
+        font-size: 14px;
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .banner-content {
+        margin: 0;
+    }
+
+    .rango-corp-cards {
+        display: none;
+    }
+
+    .rango-corp-cards-mobile {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin: 0;
+        padding: 0 var(--big-side-margin);
+        overflow-y: scroll;
+
+        &.big-cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .rango-corp-cards-mobile {
+        .rango-corp-small-card {
+            width: calc(100dvw - var(--small-side-margin) * 6) !important;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .rango-corp-big-card {
+            width: calc(100dvw - var(--small-side-margin) * 6) !important;
+            aspect-ratio: 4/7;
+
+            .rango-corp-big-card-title {
+                font-size: 14px;
+            }
+
+            .rango-corp-big-card-img {
+                object-fit: cover;
+                width: auto;
+            }
+        }
+    }
+
+    .collaborate .card-title {
+        display: none;
+    }
+
+    .collaborate .card-title-mobile {
+        display: block;
+    }
+
+    .collaborate-image {
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        object-position: 80% 0;
+    }
+
+    .dialogue.team-card-mobile .team-card-small-card-content {
+        height: min-content !important;
+    }
+}

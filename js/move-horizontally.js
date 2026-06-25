@@ -1,3 +1,5 @@
+const isDesktop = () => window.matchMedia('(min-width: 769px)').matches;
+
 const banner = document.querySelector('.banner');
 const kipi = document.querySelector('.banner .kipi');
 
@@ -10,7 +12,9 @@ let bottomPosY = -kipi.clientHeight * 4 / 11;
 
 let vx = 0, vy = 0;
 
-kipi.style.bottom = `${posY}px`;
+if (isDesktop()) {
+	kipi.style.bottom = `${posY}px`;
+}
 
 const maxSpeed = 3;    // Максимальная скорость элемента
 const friction = 0.98; // Трение (замедление), чтобы движение не было безумным
@@ -18,8 +22,9 @@ const impulse = 0.2;   // Сила случайного толчка на каж
 
 let isShowing = false; // иногда надо и показать себя красивого:)
 
-
 const moveKipi = () => {
+	if (!isDesktop()) return;
+	
 	// Если прыжка нет, рассчитываем обычное хаотичное движение
 	if (!isShowing) {
 		const angle = Math.random() * Math.PI * 2;

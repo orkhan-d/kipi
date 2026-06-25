@@ -6,6 +6,8 @@
     <link href="styles/style.css" rel="stylesheet"/>
     <link href="styles/fonts.css" rel="stylesheet"/>
     <link href="styles/activities.css" rel="stylesheet"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -22,6 +24,11 @@
                         <p class="logo-description">Персональный мотиватор</p>
                     </div>
                 </a>
+
+                <button class="nav-burger">
+                    <img src="assets/images/burger.svg" alt="burger" class="nav-burger-image"/>
+                </button>
+
                 <div class="nav-items">
                     <a class="nav-item" href="about.html">
                         О компании
@@ -29,7 +36,7 @@
                     </a>
                     <a class="nav-item" href="activities.html">Активности</a>
                     <a class="nav-item" href="partners.html">Партнерам</a>
-                    <a class="nav-item" href="contacts.html">Контакты</a>
+                    <a class="nav-item" href="about.html#collaborate">Контакты</a>
                 </div>
             </div>
             <button class="download-button">
@@ -59,6 +66,9 @@
         <div class="card-info">
             <p class="card-description">Активности в рамках приложения и вне его пределов</p>
             <p class="card-title">БЛИЖАЙШИЕ МЕРОПРИЯТИЯ</p>
+
+            <p class="card-description-mobile">Активности в рамках приложения и вне его пределов</p>
+            <p class="card-title-mobile">БЛИЖАЙ-ШИЕ МЕРОПРИ-ЯТИЯ</p>
         </div>
     </div>
     <div class="activity-cards">
@@ -128,7 +138,8 @@
             <p class="card-description">Ищи столбы Кипи для дополнительных наград</p>
             <div class="card-title search-card-title">
                 <img alt="collab" class="search-card-title-image" src="assets/images/activities/collbas.svg"/>
-                <span>: НАЙДИ ИХ ВСЕ</span>
+                <span class="mobile-hide">: НАЙДИ ИХ ВСЕ</span>
+                <span class="mobile-show">НАЙДИ ИХ ВСЕ</span>
             </div>
         </div>
     </div>
@@ -163,6 +174,17 @@
                     Узнать подробнее
                 </button>
             </div>
+        </div>
+    </div>
+
+    <div class="search-card-content-main-cards-mobile">
+        <div class="search-card-content-main-card">
+            <p class="search-card-content-main-card-value">24</p>
+            <p class="search-card-content-main-card-title">Столба разбросаны по столице Го</p>
+        </div>
+        <div class="search-card-content-main-card">
+            <p class="search-card-content-main-card-value">120</p>
+            <p class="search-card-content-main-card-title">Призов для первых нашедших все столбы</p>
         </div>
     </div>
 </div>
@@ -253,6 +275,35 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="team-card-small-card team-card-small-card-mobile team-card-small-card-weekly">
+        <img alt="support-card" src="assets/images/team/weekly-task.png" class="team-card-small-card-weekly-image"/>
+        <div class="team-card-small-card-content">
+            <p class="team-card-small-card-title">
+                Задание недели
+            </p>
+            <p class="team-card-small-card-description">
+                Успей выполнить и получи уникальные награды!
+            </p>
+        </div>
+    </div>
+
+    <div class="team-card-small-card team-card-small-card-mobile">
+        <div class="team-card-small-card-content">
+            <div class="team-card-small-card-partners-image-wrapper">
+                <img alt="support-card" src="assets/images/team/partners-info.svg" class="team-card-small-card-partners-image"/>
+            </div>
+            <p class="team-card-small-card-title">
+                ПАРТНЕРЫ
+            </p>
+            <p class="team-card-small-card-description">
+                Информация о компании и ее продуктах
+            </p>
+            <a class="card-button team-card-small-card-button reversed-button" href="index.html#partners">
+                Узнать больше
+            </a>
         </div>
     </div>
 </div>

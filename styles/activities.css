@@ -320,3 +320,142 @@
     90%  { transform: translate(-2px, 3px); }
     100% { transform: translate(0px, 0px); }
 }
+
+.mobile-show {
+    display: none;
+}
+
+.search-card-content-main-cards-mobile {
+    display: none;
+}
+
+.team-card-small-card-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .banner .kipi {
+        position: relative;
+        width: 90%;
+        margin: 32px auto 0;
+    }
+
+    .banner-title {
+        font-size: 16px;
+    }
+
+    .banner-content-main {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .quote {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .quote-title {
+        font-size: 18px;
+        font-style: normal;
+    }
+
+    .quote-content {
+        font-size: 14px;
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .banner-content {
+        margin: 0;
+    }
+
+    .activity-card-image {
+        display: none;
+    }
+
+    .activity-card {
+        grid-template-columns: 1fr;
+        width: calc(100dvw - var(--small-side-margin) * 2);
+        height: auto;
+    }
+
+    .activity-cards {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+        padding: 0 var(--small-side-margin);
+    }
+
+    .search-card-title {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+    .mobile-show {
+        display: block;
+    }
+
+    .search-card-content-main-cards {
+        display: none;
+    }
+
+    .search-card-content {
+        aspect-ratio: 1/2;
+        overflow: hidden;
+        border-radius: var(--small-radius);
+    }
+
+    .search-card-content-wrapper {
+        flex-direction: column;
+    }
+
+    .search-card-image {
+        width: auto;
+        object-fit: cover;
+        transform: translate(-22%, -10%);
+    }
+
+    .search-card-content-main-content-title {
+        font-size: 16px
+    }
+
+    .search-card-content-prize-title {
+        font-size: 12px
+    }
+
+    .search-card-content-main-cards-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0;
+        padding: 0 var(--small-side-margin);
+
+        .search-card-content-main-card {
+            background: rgba(243, 243, 243, 1);
+        }
+    }
+
+    .team-card-small-card-mobile {
+        display: flex;
+
+        width: calc(100dvw - var(--small-side-margin) * 2);
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        .team-card-small-card-content {
+            width: 100%;
+        }
+    }
+}

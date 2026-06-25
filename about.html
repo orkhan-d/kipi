@@ -6,6 +6,8 @@
     <link href="styles/style.css" rel="stylesheet"/>
     <link href="styles/fonts.css" rel="stylesheet"/>
     <link href="styles/about.css" rel="stylesheet"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -22,6 +24,14 @@
                         <p class="logo-description">Персональный мотиватор</p>
                     </div>
                 </a>
+
+                <label class="nav-burger" for="navbar-burger">
+                    <input type="checkbox" name="navbar-burger" id="navbar-burger" class="nav-burger-checkbox"/>
+
+                    <img src="assets/images/burger.svg" alt="burger" class="nav-burger-image-inactive"/>
+                    <img src="assets/images/burger-close.svg" alt="burger" class="nav-burger-image-active"/>
+                </label>
+
                 <div class="nav-items">
                     <a class="nav-item" href="about.html">
                         О компании
@@ -29,7 +39,18 @@
                     </a>
                     <a class="nav-item" href="activities.html">Активности</a>
                     <a class="nav-item" href="partners.html">Партнерам</a>
-                    <a class="nav-item" href="contacts.html">Контакты</a>
+                    <a class="nav-item" href="about.html#collaborate">Контакты</a>
+                </div>
+            </div>
+            <div class="nav-items-mobile">
+                <div class="nav-mobile-wrapper">
+                    <a class="nav-item" href="about.html">
+                        О компании
+                        <img alt="dropdown" src="assets/images/dropdown-arrow.svg">
+                    </a>
+                    <a class="nav-item" href="activities.html">Активности</a>
+                    <a class="nav-item" href="partners.html">Партнерам</a>
+                    <a class="nav-item" href="about.html#collaborate">Контакты</a>
                 </div>
             </div>
             <button class="download-button">
@@ -120,13 +141,67 @@
             </a>
         </div>
     </div>
+    <div class="rango-corp-cards-mobile">
+        <div class="rango-corp-small-card">
+            <img alt="pvz" class="rango-corp-small-card-image" src="assets/images/rango/rango-center.png"/>
+            <div class="rango-corp-small-card-content">
+                <p class="rango-corp-small-card-title">
+                    РАНГО_ЦЕНТР
+                </p>
+                <p class="rango-corp-small-card-description">
+                    В стране Го пользователи Кипи AI могут получить свои преимущества в Ранго Центре.
+                </p>
+            </div>
+        </div>
+        <div class="rango-corp-small-card">
+            <img alt="dream" class="rango-corp-small-card-image" src="assets/images/rango/dream.png"/>
+        </div>
+        <div class="rango-corp-small-card">
+            <div class="rango-corp-small-card-content">
+                <p class="rango-corp-small-card-title">
+                    КНИГА
+                </p>
+                <p class="rango-corp-small-card-description">
+                    Помимо здания, РАНГО также занимается книгопечатанием, в особенности о Партии и строе.
+                </p>
+            </div>
+            <img alt="book" class="rango-corp-small-card-image" src="assets/images/rango/book.png"/>
+        </div>
+        <div class="rango-corp-small-card">
+            <img alt="reminder" class="rango-corp-small-card-image" src="assets/images/rango/reminder.png"/>
+        </div>
+    </div>
+
+    <div class="rango-corp-cards-mobile big-cards">
+        <a class="rango-corp-big-card" href="404.html">
+            <div class="rango-corp-big-card-purple"></div>
+            <img alt="logo" class="rango-corp-big-card-img" src="assets/images/team/calibrate.png"/>
+            <p class="rango-corp-big-card-title">
+                Калибровка очков
+            </p>
+            <p class="rango-corp-big-card-description">
+                Партнеры Кипи AI предлагают откалибровать ваши VR-очки
+            </p>
+        </a>
+        <a class="rango-corp-big-card" href="404.html">
+            <div class="rango-corp-big-card-green"></div>
+            <img alt="logo" class="rango-corp-big-card-img" src="assets/images/team/info.png"/>
+            <p class="rango-corp-big-card-title">
+                ПАМЯТКА СЕРВИСА
+            </p>
+            <p class="rango-corp-big-card-description">
+                Столпы использования сервиса, юридическая информация
+            </p>
+        </a>
+    </div>
 </div>
 
-<div class="collaborate card">
+<div class="collaborate card" id="collaborate">
     <div class="card-header">
         <div class="card-info">
             <p class="card-description">Партнерство с Кипи AI и РАНГО</p>
             <p class="card-title">Открыты к сотрудничеству</p>
+            <p class="card-title-mobile">Открыты к сотрудни-честву</p>
         </div>
     </div>
     <div class="collaborate-content">
@@ -145,18 +220,6 @@
     </div>
     <div class="team-card-cards">
         <div class="team-card-column">
-<!--
-            <div class="team-card-big-card">
-                <div class="team-card-big-card-purple"></div>
-                <img alt="logo" class="team-card-big-card-img" src="assets/images/team/calibrate.png"/>
-                <p class="team-card-big-card-title">
-                    Калибровка очков
-                </p>
-                <p class="team-card-big-card-description">
-                    Партнеры Кипи AI предлагают откалибровать ваши VR-очки
-                </p>
-            </div>
--->
             <div class="team-card-small-cards">
                 <div class="team-card-small-card">
                     <div class="team-card-small-card-content">
@@ -188,18 +251,6 @@
             </div>
         </div>
         <div class="team-card-column">
-<!--
-            <div class="team-card-big-card">
-                <div class="team-card-big-card-green"></div>
-                <img alt="logo" class="team-card-big-card-img" src="assets/images/team/info.png"/>
-                <p class="team-card-big-card-title">
-                    ПАМЯТКА СЕРВИСА
-                </p>
-                <p class="team-card-big-card-description">
-                    Столпы использования сервиса, юридическая информация
-                </p>
-            </div>
--->
             <div class="team-card-small-cards">
                 <div class="team-card-small-card team-card-small-card-weekly">
                     <img alt="support-card" src="assets/images/team/weekly-task.png" class="team-card-small-card-weekly-image"/>
@@ -227,6 +278,31 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="team-card-small-card team-card-mobile dialogue">
+    <div class="team-card-small-card-content">
+        <p class="team-card-small-card-title">
+            Открыты к диалогу
+        </p>
+        <p class="team-card-small-card-description">
+            Готовы помочь и ответить на вопросы в любое время суток
+        </p>
+    </div>
+    <img alt="support-card" src="assets/images/team/support-card.svg" class="team-card-small-card-support-image"/>
+</div>
+<div class="team-card-small-card team-card-small-card-more team-card-mobile">
+    <div class="team-card-small-card-content">
+        <p class="team-card-small-card-title">
+            Узнайте больше
+        </p>
+        <p class="team-card-small-card-description">
+            Информация о компании и ее продуктах
+        </p>
+        <a class="card-button team-card-small-card-button reversed-button" href="about.html">
+            Узнать больше о компании
+        </a>
     </div>
 </div>
 
