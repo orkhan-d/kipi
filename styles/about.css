@@ -291,4 +291,8 @@
     .dialogue.team-card-mobile .team-card-small-card-content {
         height: min-content !important;
     }
+
+    .team-card {
+        gap: 24px;
+    }
 }
